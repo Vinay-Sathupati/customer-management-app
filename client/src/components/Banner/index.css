@@ -1,0 +1,38 @@
+.banner-main-container{
+    width: 100vw;
+    margin: 0px;
+}
+
+.top-styling-container{
+    height: 45px;
+    background-color: #2f3437;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    gap: 10px;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.home-icon{
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.red{
+    background-color: #ff5f57;
+}
+
+.yellow{
+    background-color: #ffbd2e;
+}
+
+.green{
+    background-color: #28c840;
+}

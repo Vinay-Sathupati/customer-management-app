@@ -1,0 +1,91 @@
+.new-registration-main-container-form{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.form-first-last-name-phone, .city-state-pin-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px;
+}
+
+.name-input-container, 
+.phone-input-container,
+.city-input-container,
+.state-input-container,
+.zip-input-container{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.label-heading{
+    font-family: 'Hanken Grotesk';
+    font-size: 22px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.input-element{
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Hanken Grotesk';
+    font-size: 20px;
+    padding: 8px;
+    border: #2f3437 solid 1px;
+    color: #111;
+}
+
+.star-mark{
+    color: #f80404;
+}
+
+.address-input-container{
+    margin: 20px;
+}
+
+.add-button{
+    color: #2563eb;
+    background-color: transparent;
+    border: none;
+    border:none;
+    padding: 10px;
+    font-family: 'Hanken Grotesk';
+    font-size: 18px;
+    font-weight: 500;
+    height: 40px;
+    width: 220px;
+    cursor: pointer;
+    outline: none;
+}
+
+.submit-cancel-button-container{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.save-customer-button, .cancel-button{
+    font-family: 'Hanken Grotesk';
+    font-size: 20px;
+    font-weight: 500;
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.save-customer-button{
+    background-color: #2563eb;
+    color: #fff;
+}

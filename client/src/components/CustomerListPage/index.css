@@ -1,0 +1,151 @@
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.banner-heading-link{
+    text-decoration: none;
+}
+
+.banner-heading{
+    font-family: 'Hanken Grotesk';
+    font-weight: 700;
+    color: #111;
+    font-size: 32px;
+}
+
+.add-customer-button{
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: #2556b0;
+    color: #fff;
+    font-family: 'Hanken Grotesk';
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.horizontal-line{
+    opacity: 0.5;
+    color: #2f3437;
+}
+
+.customers-list-page-main-container{
+    height: 100vh;
+    margin: 0px;
+}
+
+.search-and-sort-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.search-input-element{
+    width: 70%;
+    height: 45px;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Hanken Grotesk';
+    font-size: 20px;
+    padding: 10px;
+    border: #2f3437 solid 1px;
+    color: #111;
+}
+
+.sort-by-container{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.sort-by-icon{
+    width: 45px;
+    height: 45px;
+}
+
+.sort-by-heading{
+    font-family: 'Hanken Grotesk';
+    font-size: 24px;
+    color: #111;
+    font-weight: 500;
+}
+
+.sort-by-select{
+    border: none;
+    font-family: 'Hanken Grotesk';
+    font-size: 22px;
+    color: #111;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-and-list-main-container{
+    display: flex;
+    gap: 15px;
+}
+
+.customers-list-main-container{
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.customers-list-table{
+    width: 100%;
+    font-size: 22px;
+    color: #111;
+    border-collapse: collapse;
+    font-family: 'Hanken Grotesk';
+}
+
+.customers-list-table th, .customers-list-table td{
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.customers-list-table thead tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.customers-list-table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.customers-list-table tbody tr:last-child{
+    border: none;
+}
+
+.delete-view-button-container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.delete-button, .view-button{
+    border: #111 solid 1px;
+    border-radius: 5px;
+    width: 70px;
+    background-color: transparent;
+    font-family: 'Hanken Grotesk';
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px;
+    color: #111;
+    cursor: pointer;
+    outline: none;
+}
