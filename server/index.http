@@ -1,0 +1,70 @@
+//***Customer Routes***
+
+//Get a list of all customers
+GET http://localhost:5000/api/customers
+###
+
+
+//Get details of a single customer
+GET http://localhost:5000/api/customers/1
+###
+
+// Create a new customer
+POST http://localhost:5000/api/customers
+Content-Type: application/json
+
+{
+    "firstName": "Venkat",
+    "lastName": "Sharma",
+    "phone": "9555555550"
+}
+###
+
+//Update customer information
+PUT http://localhost:5000/api/customers/1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Smith",
+    "phone": "9555555550"
+}
+###
+
+//Delete a customer
+DELETE http://localhost:5000/api/customers/2
+###
+
+//***Address Routes***
+
+//Get all addresses for a specific customer
+GET http://localhost:5000/api/customers/3/addresses
+###
+
+//Add a new address for a specific customer
+POST http://localhost:5000/api/customers/4/addresses
+Content-Type: application/json
+
+{
+    "address_details": "MIG 155, KPR Complex, KPHB Road No. 1, Above State Bank Of India, Kukatpally",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pin_code": "500072"
+}
+###
+
+//Update a specific address
+PUT http://localhost:5000/api/addresses/4
+Content-Type: application/json
+
+{
+    "address_details": "2-37/27/2, Plot No: 127, Above Pizza Hut Beside Spencer's Super Market, Vinayak Nagar, Gachibowli",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pin_code": "500032"
+}
+###
+
+//Delete a specific address
+DELETE http://localhost:5000/api/addresses/4
+###
