@@ -1,5 +1,6 @@
 # Tech Assignment - Customer Management App 
-A full-stack web application  for managing customer and address information. Built using React for the frontend, Node.js and Express for the backend, and SQLite as the database.
+A full-stack web application for managing **customers and their addresses**.
+Built using **React** for the frontend, **Node.js + Express** for the backend, and **SQLite** as the database.
 
 ## 🛠 Tools & Libraries Used
 
@@ -10,22 +11,24 @@ A full-stack web application  for managing customer and address information. Bui
 - CSS (Responsive styling)
 - React Router for navigation
 - React Icons
-- React Pop-up
-- axios
+- React Pop-up (for modals)
+- axios (API calls)
 
 ### 🌐 Backend
 ![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
 ![Express](https://img.shields.io/badge/API-Express-red)
 - Node.js
 - Express.js
-- CORS for cross-origin requests
-- sqlite3 for database access
-- nodemon for server auto-reloading
+- CORS (cross-origin requests)
+- sqlite3 (database access)
+- nodemon (auto-reload for server)
 
 ### 💽 Database
 ![SQLite](https://img.shields.io/badge/Database-SQLite3-lightgrey)
-- SQLite (with `sqlite3` and `sqlite` packages)
-- Used **SQLite CLI** to create and manage tables directly and generate the `.db` file (`customersInfo.db`), which is accessed by the Node.js backend via the `sqlite3` and `sqlite` packages.
+
+- SQLite database (`customersInfo.db`).
+- Created and managed using the **SQLite CLI**.
+- Accessed in backend via **sqlite3** and **sqlite** packages.
 
 `customersInfo.db` has two tables: one for `customers` and one for their `addresses`.
 
@@ -54,12 +57,10 @@ A full-stack web application  for managing customer and address information. Bui
 | pin_code       | TEXT    | NOT NULL                  | Postal/ZIP code          |
 
 
-This structure creates a **one-to-many relationship**:  
-👉 One customer can have multiple addresses.
+👉 **One-to-Many Relationship**: one customer can have multiple addresses.
 
 
-
-### 📂 Folder Structure
+## 📂 Folder Structure
 ```
 customer-management-app/
 │
@@ -89,3 +90,57 @@ customer-management-app/
 │
 └── README.md
 ```
+
+## 📸 Screenshots
+
+- Customers List Page
+
+![Customers_List_Page](./client/screenshots/Customers_List_Page.png)
+
+- Customer Details Page
+
+![Customer_Details_Page](./client/screenshots/Customer_Details_Page.png)
+
+- Customers Form Page
+  -- To Create New Customer
+  ![Customer_Form_Page](./client/screenshots/Customer_Form_Page.png)
+
+  -- To Edit Existing Customer
+  ![Customer_Form_Page2](./client/screenshots/Customer_Form_Page2.png)
+  
+
+## ✨ Key Feature
+
+### 📋 Customer List Page  
+- Displays a **list of all customers** with their basic details.  
+- Provides quick **navigation to individual customer profiles**.  
+- Supports **searching, sorting, and filtering** based on available criteria.  
+- Clean **tabular layout** for better readability.  
+
+---
+### 👤 Customer Details Page  
+- Displays **customer profile information** (name, phone number, customer ID).  
+- Shows all **saved addresses** for the customer in a clean card layout.  
+- **Single vs Multiple Address Handling**:  
+  - If a customer has only one address → shows a caution as **"Only One Address"**.  
+  - If a customer has multiple addresses → all addresses are displayed in a list.  
+- **Edit Address** option available for each address individually.  
+- **Edit (Customer)** and **Delete (Customer)** buttons implemented using **React Popup**.    
+
+---
+### 📝 Customer Form Page  
+- Contains **two tabs** for handling customer data:  
+  1. **Create Customer Tab** – Add a new customer with personal details and one or multiple addresses.  
+  2. **Edit Customer Tab** – Update details of an existing customer, including their saved addresses.  
+- Provides **form validations** (e.g., required fields like phone number, city, state, etc.).
+
+---
+### ✏️ Edit & Delete Pop-ups  
+- Implemented using the **react-popup** library.  
+- **Edit Pop-up**:  
+  - Enables modifying customer details or individual addresses.  
+  - Pre-fills form fields for a better user experience.  
+- **Delete Confirmation Pop-up**:  
+  - Ensures customers/addresses are not removed accidentally.  
+  - Displays a confirmation message before final deletion.  
+  - On confirmation, deletes the record and **redirects to the Customers List Page**.
