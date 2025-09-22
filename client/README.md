@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Tech Assignment - Customer Management App 
+A full-stack web application  for managing customer and address information. Built using React for the frontend, Node.js and Express for the backend, and SQLite as the database.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🛠 Tools & Libraries Used
 
-## Available Scripts
+### 🖥️ Frontend
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![CSS](https://img.shields.io/badge/Styling-CSS3-blueviolet)
+- React.js (with Class Components)
+- CSS (Responsive styling)
+- React Router for navigation
+- React Icons
+- React Pop-up
+- axios
 
-In the project directory, you can run:
+### 🌐 Backend
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
+![Express](https://img.shields.io/badge/API-Express-red)
+- Node.js
+- Express.js
+- CORS for cross-origin requests
+- sqlite3 for database access
+- nodemon for server auto-reloading
 
-### `npm start`
+### 💽 Database
+![SQLite](https://img.shields.io/badge/Database-SQLite3-lightgrey)
+- SQLite (with `sqlite3` and `sqlite` packages)
+- Used **SQLite CLI** to create and manage tables directly and generate the `.db` file (`customersInfo.db`), which is accessed by the Node.js backend via the `sqlite3` and `sqlite` packages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`customersInfo.db` has two tables: one for `customers` and one for their `addresses`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `customers` Table Schema
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+| Column      | Type    | Constraints               | Description              |
+|-------------|---------|---------------------------|--------------------------|
+| id          | INTEGER | PRIMARY KEY AUTOINCREMENT | Unique identifier        |
+| first_name  | TEXT    | NOT NULL                  | Customer's first name    |
+| last_name   | TEXT    | NOT NULL                  | Customer's last name     |
+| phone_number| TEXT    | NOT NULL UNIQUE           | Customer's phone number  |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `addresses` Table Schema
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Column         | Type    | Constraints               | Description              |
+|----------------|---------|---------------------------|--------------------------|
+| id             | INTEGER | PRIMARY KEY AUTOINCREMENT | Unique identifier        |
+| customer_id    | INTEGER | FOREIGN KEY (customers)   | Links to the customer    |
+| address_details| TEXT    | NOT NULL                  | Street, building, etc.   |
+| city           | TEXT    | NOT NULL                  | City name                |
+| state          | TEXT    | NOT NULL                  | State name               |
+| pin_code       | TEXT    | NOT NULL                  | Postal/ZIP code          |
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This structure creates a **one-to-many relationship**:  
+👉 One customer can have multiple addresses.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Folder Structure
+```
+customer-management-app/
+├── client/         # React JS frontend code
+└── server/         # Node.js/Express backend code
+```
