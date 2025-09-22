@@ -155,7 +155,7 @@ All endpoints are prefixed with `/api`.
 ### 👤 Customer Routes  
 - **POST** `/api/customers` → Create a new customer.  
 - **GET** `/api/customers` → Get a list of all customers.  
-  - Supports **searching**, **sorting**, and **(planned)** pagination.  
+  - Supports **searching**, **sorting**.  
 - **GET** `/api/customers/:id` → Get details for a single customer by ID.  
 - **PUT** `/api/customers/:id` → Update an existing customer’s information.  
 - **DELETE** `/api/customers/:id` → Delete a customer.  
