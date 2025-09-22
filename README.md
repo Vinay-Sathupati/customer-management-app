@@ -147,6 +147,28 @@ customer-management-app/
   - Displays a confirmation message before final deletion.  
   - On confirmation, deletes the record and **redirects to the Customers List Page**.
 
+
+## 🔌 API Endpoints  
+
+All endpoints are prefixed with `/api`.  
+
+### 👤 Customer Routes  
+- **POST** `/api/customers` → Create a new customer.  
+- **GET** `/api/customers` → Get a list of all customers.  
+  - Supports **searching**, **sorting**, and **(planned)** pagination.  
+- **GET** `/api/customers/:id` → Get details for a single customer by ID.  
+- **PUT** `/api/customers/:id` → Update an existing customer’s information.  
+- **DELETE** `/api/customers/:id` → Delete a customer.  
+
+---
+
+### 🏠 Address Routes  
+- **POST** `/api/customers/:id/addresses` → Add a new address for a specific customer.  
+- **GET** `/api/customers/:id/addresses` → Get all addresses linked to a specific customer.  
+- **PUT** `/api/addresses/:addressId` → Update a specific address by ID.  
+- **DELETE** `/api/addresses/:addressId` → Delete a specific address by ID.  
+
+
 ## 🚀 How to Run the Project
 
 1. Clone the Repository
