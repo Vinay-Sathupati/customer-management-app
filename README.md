@@ -102,10 +102,12 @@ customer-management-app/
 ![Customer_Details_Page](./client/screenshots/Customer_Details_Page.png)
 
 - Customers Form Page
-  -- To Create New Customer
+  - To Create New Customer
+
   ![Customer_Form_Page](./client/screenshots/Customer_Form_Page.png)
 
-  -- To Edit Existing Customer
+  - To Edit Existing Customer
+
   ![Customer_Form_Page2](./client/screenshots/Customer_Form_Page2.png)
   
 
@@ -144,3 +146,44 @@ customer-management-app/
   - Ensures customers/addresses are not removed accidentally.  
   - Displays a confirmation message before final deletion.  
   - On confirmation, deletes the record and **redirects to the Customers List Page**.
+
+## 🚀 How to Run the Project
+
+1. Clone the Repository
+
+    ```
+    git clone https://github.com/Vinay-Sathupati/customer-management-app.git
+
+    cd customer-management-app
+    ```
+
+2. Backend Setup (Server)
+
+    ```
+    cd server
+
+    npm install
+
+    nodemon index.js
+    ```
+
+
+    Starts the Express server at http://localhost:5000/.
+
+    Uses customersInfo.db as the SQLite database.
+
+3. Frontend Setup (Client)
+
+    Open a new terminal and run:
+
+    ```
+    cd client
+
+    npm install
+
+    npm start
+    ```
+
+    Starts the React app at http://localhost:3000/.
+
+    Communicates with the backend API for CRUD operations.
